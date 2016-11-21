@@ -16,7 +16,7 @@ With this extension, users will be able to:
 
 ### Wireframes
 
-<!-- ![wireframes]() -->
+![wireframes](https://github.com/Gabriel-Lewis/Birdy/blob/master/Images/birdy.png?raw=true)
 
 ### Technologies & Technical Challenges
 
