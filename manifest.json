@@ -1,0 +1,13 @@
+{
+  "name": "Birdy",
+  "version": "0.1",
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "main.html"
+  },
+  "description": "A tweet in every new tab",
+  "browser_action": {
+    "default_title": "Birdy",
+    "default_popup": "popup.html"
+  }
+}
