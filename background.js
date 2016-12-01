@@ -9,7 +9,7 @@ $(function() {
       $('.main').prepend('<p>Sign in to <a href="https://twitter.com">Twitter</a></p>');
       $('.buttons').addClass('hidden')
       $('.new-tweet').addClass('hidden')
-    }
+    } else {
 
     let feed = $(htmlData).find('ol').eq(0);
     let first_tweet = $(feed).find('li').eq(0)
@@ -22,7 +22,7 @@ $(function() {
     let at_users = first_tweet.find('a.twitter-atreply').toArray()
     let img = first_tweet.find('.AdaptiveMedia')
     let retweet_link = first_tweet.find('.QuoteTweet-link.js-nav').attr('href')
-    let retweet = first_tweet.find('QuoteTweet-container')
+    let retweet = first_tweet.find('.QuoteTweet-authorAndText')
 
 
 
@@ -32,9 +32,12 @@ $(function() {
    	first_tweet.find('a.account-group').attr("href", `http://www.twitter.com/${username}`);
     first_tweet.find('a.tweet-timestamp').attr('href', tweet_url);
 
-    $(retweet).wrap($('<a>',{ href: 'http://www.twitter.com/' + retweet_link }));
     $(img).click(function() {
         window.location.href = tweet_url;
+    });
+
+    $(retweet).click(function() {
+      window.location.href =  'http://twitter.com/' + retweet_link;
     });
 
     for (var i = 0; i < hashtags.length; i++) {
@@ -55,5 +58,6 @@ $(function() {
     $('.retweet').attr('href', 'http://twitter.com/intent/retweet?tweet_id=' + id);
     $('.like').attr('href', 'http://twitter.com/intent/like?tweet_id=' + id);
     $('.reply').attr('href', 'http://twitter.com/intent/tweet?in_reply_to=' + id);
+    }
   });
 })

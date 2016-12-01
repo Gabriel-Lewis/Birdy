@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Birdy",
-  "description": "View the latest tweet from your feed in every new tab",
-  "version": "0.0.0.2",
+  "description": "Replaces the new tab page with the top tweet from your Twitter feed",
+  "version": "0.0.0.3",
   "browser_action": { "default_popup": "popup.html" },
   "background": { "page":"background.html" },
   "permissions": [ "tabs", "http://localhost/", "http://*/*", "https://*/*", "https://api.twitter.com/*" ],
