@@ -58,6 +58,7 @@ $(function() {
     $('.retweet').attr('href', 'http://twitter.com/intent/retweet?tweet_id=' + id);
     $('.like').attr('href', 'http://twitter.com/intent/like?tweet_id=' + id);
     $('.reply').attr('href', 'http://twitter.com/intent/tweet?in_reply_to=' + id);
+    $('.dropdown').addClass('hidden');
     }
   });
 })
